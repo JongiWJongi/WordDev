@@ -33,13 +33,7 @@
 
           <!-- Top Links
           ============================================= -->
-          <div class="top-links">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div><!-- .top-links end -->
+      
 
         </div>
 
@@ -103,164 +97,26 @@
 
       <div id="header-wrap">
 
-        <!-- Primary Navigation
-        ============================================= -->
-        <nav id="primary-menu" class="style-2">
+      <nav id="primary-menu" class="style-2">
 
           <div class="container clearfix">
 
             <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
-            <!-- ul Main Menu
-            ======================================== -->
-            <ul>
-              <li><a href="#">
-                  <div>Menu Item 1</div>
-                </a>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <div>Submenu Item 1</div>
-                    </a>
-                    <ul>
-                      <li><a href="#">
-                          <div>Submenu Item 1</div>
-                        </a></li>
-                      <li><a href="#">
-                          <div>Submenu Item 2</div>
-                        </a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">
-                      <div>Submenu Item 2</div>
-                    </a></li>
-                </ul>
-              </li>
-              <li><a href="#">
-                  <div>Menu Item 2</div>
-                </a>
-                <ul>
-                  <li><a href="#">
-                      <div>Submenu Item 1</div>
-                    </a>
-                    <ul>
-                      <li><a href="#">
-                          <div>Submenu Item 1</div>
-                        </a></li>
-                      <li><a href="#">
-                          <div>Submenu Item 2</div>
-                        </a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">
-                      <div>Submenu Item 2</div>
-                    </a></li>
-                </ul>
-              </li>
-              <li><a href="#">
-                  <div>Menu Item 3</div>
-                </a>
-                <ul>
-                  <li><a href="#">
-                      <div>Submenu Item 1</div>
-                    </a>
-                    <ul>
-                      <li><a href="#">
-                          <div>Submenu Item 1</div>
-                        </a>
-                        <ul>
-                          <li><a href="#">
-                              <div>Submenu Item 1</div>
-                            </a></li>
-                          <li><a href="#">
-                              <div>Submenu Item 2</div>
-                            </a></li>
-                          <li><a href="#">
-                              <div>Submenu Item 3</div>
-                            </a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">
-                          <div>Submenu Item 2</div>
-                        </a></li>
-                      <li><a href="#">
-                          <div>Submenu Item 3</div>
-                        </a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">
-                      <div>Submenu Item 2</div>
-                    </a>
-                    <ul>
-                      <li><a href="#">
-                          <div>Submenu Item 1</div>
-                        </a></li>
-                      <li><a href="#">
-                          <div>Submenu Item 2</div>
-                        </a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">
-                      <div>Submenu Item 3</div>
-                    </a></li>
-                </ul>
-              </li>
-              <li><a href="#">Menu Item 4</a></li>
-            </ul><!-- ul Main Menu end -->
-
-            <!-- Top Cart
+            <!-- Primary Navigation
             ============================================= -->
-            <div id="top-cart">
-              <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
-              <div class="top-cart-content">
-                <div class="top-cart-title">
-                  <h4>Shopping Cart</h4>
-                </div>
-                <div class="top-cart-items">
-                  <div class="top-cart-item clearfix">
-                    <div class="top-cart-item-image">
-                      <a href="#"><img src="images/shop/small/1.jpg" /></a>
-                    </div>
-                    <div class="top-cart-item-desc">
-                      <a href="#">Blue Round-Neck Tshirt</a>
-                      <span class="top-cart-item-price">$19.99</span>
-                      <span class="top-cart-item-quantity">x 2</span>
-                    </div>
-                  </div>
-                  <div class="top-cart-item clearfix">
-                    <div class="top-cart-item-image">
-                      <a href="#"><img src="images/shop/small/6.jpg" /></a>
-                    </div>
-                    <div class="top-cart-item-desc">
-                      <a href="#">Light Blue Denim Dress</a>
-                      <span class="top-cart-item-price">$24.99</span>
-                      <span class="top-cart-item-quantity">x 3</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="top-cart-action clearfix">
-                  <span class="fleft top-checkout-price">$114.95</span>
-                  <button class="button button-3d button-small nomargin fright">
-                    View Cart
-                  </button>
-                </div>
-              </div>
-            </div><!-- #top-cart end -->
+            <?php if(has_nav_menu('primary')) {
+                wp_nav_menu([
+                         'theme_location'     => 'primary',
+                        'container'          => false,
+                        'fallback_cb'        => false,
+                        'depth'              => 0
+                ]);
+       } ?>
 
-            <!-- Top Search
-            ============================================= -->
-            <div id="top-search">
-              <a href="#" id="top-search-trigger">
-                <i class="icon-search3"></i><i class="icon-line-cross"></i>
-              </a>
-              <form action="#" method="get">
-                <input type="text" name="q" class="form-control" placeholder="Type &amp; Hit Enter.." value="">
-              </form>
-            </div><!-- #top-search end -->
-
-          </div>
-
-        </nav><!-- #primary-menu end -->
+            </div>
+        </div>
+    </div>
 
       </div>
 
@@ -531,7 +387,14 @@
             <i class="icon-envelope2"></i> info@email.com <span class="middot">&middot;</span>
             <i class="icon-headphones"></i> +55-5-5555-5555
           </div>
-
+          <?php if(has_nav_menu('footer')) {
+           wp_nav_menu([
+               'theme_location'     => 'footer',
+               'container'          => false,
+               'fallback_cb'        => false,
+               'depth'              => 0
+           ]);
+       } ?>
         </div>
 
       </div><!-- #copyrights end -->
